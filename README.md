@@ -8,22 +8,42 @@ To write a program to find the LU Decomposition of a matrix.
 2. Anaconda – Python 3.7 Installation / Moodle-Code Runner
 
 ## Algorithm
-1. 
-2. 
-3. 
-4. 
+1. Start the program.
+2. import numpy,import scipy.
+3. using lu_factor,lu_solve.
+4. End the program.
 
 ## Program:
 ```
 /*
 Program to find the LU Decomposition of a matrix.
-Developed by: 
-RegisterNumber: 
+Developed by: Vineesh.M
+RegisterNumber: 21004131
 */
+
+# To print L and U matrix
+import numpy as np
+import scipy
+from scipy.linalg import lu
+A = eval(input())
+P,L,U=lu(A)
+print(L)
+print(U)
+
+
+# To print X matrix (solution to the equations)
+import numpy as np
+from scipy.linalg import lu_factor,lu_solve
+A = eval(input())
+B = eval(input())
+lu,piv = lu_factor(A)
+x = lu_solve((lu,piv),B)
+print(x)
 ```
 
 ## Output:
-![lu decomposition]()
+![lu decomposition](lu1.png)
+![lu decomposition](lu2.png)
 
 
 ## Result:
